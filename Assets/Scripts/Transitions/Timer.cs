@@ -4,12 +4,23 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
+[System.Serializable]
+public class Pics
+{
+    public string[] picSlot;
+}
+
 public class Timer : MonoBehaviour {
+
+    public Pics[] pics;
+
 
     public int sizeOfArray;
     public int count = 0;
     public int endcount = 0;
     public Text TimerUI;
+
+    
 
     public CanvasGroup[] uiElement = new CanvasGroup[5];
 
@@ -21,10 +32,13 @@ public class Timer : MonoBehaviour {
     public int[] slides = new int[5];
     public RawImage[] slideImage = new RawImage[5];//the 5 slot canvas
     private float startTimer;
+    
+
 
 	void Start () {
 
         startTimer = Time.time;
+
 	}
 	
 	// Update is called once per frame
