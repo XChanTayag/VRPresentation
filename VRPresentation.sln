@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRPresentation.Plugins", "VRPresentation.Plugins.csproj", "{1FD4CC10-57A5-0523-7D04-E27A7BA385F0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRPresentation", "VRPresentation.csproj", "{C0D904BF-DDFC-B30E-A7A0-2B726AB0EF47}"
