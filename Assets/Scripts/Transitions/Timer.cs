@@ -7,12 +7,12 @@ using UnityEngine.UI;
 [System.Serializable]
 public class Pics
 {
-    public string[] picSlot;
+    public Texture2D[] picSlot;
 }
 
 public class Timer : MonoBehaviour {
 
-    public Pics[] pics;
+    public Pics[] pics; //Array for each picture to be display in the slideimage slots
 
 
     public int sizeOfArray;
@@ -26,8 +26,8 @@ public class Timer : MonoBehaviour {
 
     public string[] slideStart = new string[5];
     public string[] slideEnd = new string[5];
-    public Texture2D[] imageNum = new Texture2D[5];//Image that will be used for the canvas
-    public int[] imageSlot = new int[5];//Slot that will be used for the image
+    //public Texture2D[] imageNum = new Texture2D[5];//Image that will be used for the canvas
+    //public int[] imageSlot = new int[5];//Slot that will be used for the image
     public int scene1;
     public int[] slides = new int[5];
     public RawImage[] slideImage = new RawImage[5];//the 5 slot canvas
@@ -78,18 +78,31 @@ public class Timer : MonoBehaviour {
 
     public void setImage()
     {
-        slideImage[imageSlot[count]].texture = imageNum[count];
+        //slideImage[imageSlot[count]].texture = imageNum[count];
+        slideImage[0].texture = pics[count].picSlot[0];
+        slideImage[1].texture = pics[count].picSlot[1];
+        slideImage[2].texture = pics[count].picSlot[2];
+        slideImage[3].texture = pics[count].picSlot[3];
+        slideImage[4].texture = pics[count].picSlot[4];
     }
 
     public void FadeIn()
     {
-        StartCoroutine(FadeCanvasGroup(uiElement[imageSlot[count]], uiElement[imageSlot[count]].alpha, 1, .5f));
+        //StartCoroutine(FadeCanvasGroup(uiElement[imageSlot[count]], uiElement[imageSlot[count]].alpha, 1, .5f));
+        for (int i = 0; i < 5; i++)
+        {
+            StartCoroutine(FadeCanvasGroup(uiElement[i], uiElement[i].alpha, 1, .5f));
+        }
     }
 
     public void FadeOut()
     {
-        StartCoroutine(FadeCanvasGroup(uiElement[imageSlot[endcount]], uiElement[imageSlot[endcount]].alpha, 0, .5f));
-     
+        //StartCoroutine(FadeCanvasGroup(uiElement[imageSlot[endcount]], uiElement[imageSlot[endcount]].alpha, 0, .5f));
+        for (int i = 0; i < 5; i++)
+        {
+            StartCoroutine(FadeCanvasGroup(uiElement[i], uiElement[i].alpha, 0, .5f));
+        }
+
     }
 
     public IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float lerpTime = 1)
