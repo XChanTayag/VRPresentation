@@ -130,6 +130,8 @@
     <Compile Include="Assets\Scripts\Utility\Underwater.cs" />
     <Compile Include="Assets\Scripts\Utility\UserInfo.cs" />
     <Compile Include="Assets\Scripts\WarpPoint.cs" />
+    <Compile Include="Assets\SlideBack.cs" />
+    <Compile Include="Assets\SlideLoad.cs" />
     <Compile Include="Assets\Spinner.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Common\SessionData.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Menu\MenuAnimator.cs" />
