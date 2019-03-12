@@ -48,7 +48,7 @@ public class SlideLoad : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         TimeUpdate();
         SetLocation();
