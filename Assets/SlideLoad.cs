@@ -30,7 +30,7 @@ public class SlideLoad : MonoBehaviour
     public int numberOfObjects;
 
     public float timereseted;
-    public float timer = Time.time;
+    public float timer;
     public float timeElapsed = 0;
     public int sec;
     private float temp;
